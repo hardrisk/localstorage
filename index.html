@@ -1,0 +1,37 @@
+<html>
+<head><title>local storage</title></head>
+<body>
+<center>
+<textarea autofocus id="user" style="margin-bottom: 4px; width: 90%; height: 400px">
+</textarea><br>
+<button id="save">Kaydet</button>
+<!--<button id="save">Clear</button>--><br><br><br><br><br><br>
+<a href="https://stackoverflow.com/questions/7892446/how-to-save-to-localstorage-from-textarea"></a><br>
+</center>
+<script type="text/javascript">
+
+//check if "user" is in localStorage
+
+if (localStorage["user"])
+{
+    var user = localStorage["user"] ;
+    document.getElementById("user").value = user ;
+}
+else
+{
+    document.getElementById("user").placeholder = "yazın" ;
+    console.log("user no found in localStorage")
+}
+
+//save entered gmail address
+document.getElementById("save").addEventListener("click", function ()
+    {
+        var user = document.getElementById("user").value ;
+        //localStorage["user"] = user ;
+        localStorage.setItem("user", user) ;
+        alert("değişiklikler kaydedildi") ;
+        console.log("gmail id saved")
+    } , false);
+</script>
+</body>
+</html>
