@@ -20,7 +20,7 @@ if (localStorage["user"])
 else
 {
     document.getElementById("user").placeholder = "yazın" ;
-    console.log("user no found in localStorage")
+    console.log("user not found in localStorage")
 }
 
 //save entered gmail address
@@ -29,8 +29,8 @@ document.getElementById("save").addEventListener("click", function ()
         var user = document.getElementById("user").value ;
         //localStorage["user"] = user ;
         localStorage.setItem("user", user) ;
-        alert("değişiklikler kaydedildi") ;
-        console.log("gmail id saved")
+        alert("Değişiklikler kaydedildi.") ;
+        console.log("kaydedildi")
     } , false);
 </script>
 </body>
